@@ -49,6 +49,10 @@ function procesatexto(texto, comandos) {
         cadenaProcesada = texto.substring(1, texto.length)
     }
 
+    function dup(texto){
+        cadenaProcesada = texto + texto
+    }
+
     for(let i = 0; i < comandos.length; i++){
         comprobarMemoria(texto)
         elegirFuncion(comandos[i])
