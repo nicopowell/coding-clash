@@ -1,5 +1,5 @@
 const texto = "Hola mundo";
-const comandos = ["INTERCAMBIA", "BORRAULTI"];
+const comandos = ["INTERCAMBIA",  "BORRAULTI"];
 
 function procesatexto(texto, comandos) {
     function comprobarMemoria(texto) {
@@ -40,7 +40,8 @@ function procesatexto(texto, comandos) {
         }
     }
 
-    function borrarUlti(){
-        
+    for(let i = 0; i < comandos.length; i++){
+        comprobarMemoria(texto)
+        elegirFuncion(comandos[i])
     }
 }
