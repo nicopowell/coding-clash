@@ -11,32 +11,36 @@ function procesatexto(texto, comandos) {
     function elegirFuncion(comando) {
         switch (comando) {
             case "INTERCAMBIA":
-                intercambia();
+                intercambia(texto);
                 break;
             case "BORRAULTI":
-                borraUlti();
+                borraUlti(texto);
                 break;
             case "BORRAPRI":
-                borraPri();
+                borraPri(texto);
                 break;
             case "DUP":
-                dup();
+                dup(texto);
                 break;
             case "ROTA":
-                rota();
+                rota(texto);
                 break;
             case "INVERTIR":
-                invertir();
+                invertir(texto);
                 break;
             case "CHAUAGUS":
-                chauAgus();
+                chauAgus(texto);
                 break;
             case "AGREGA":
-                agrega();
+                agrega(texto, cadena);
                 break;
             case "BORRA":
-                borra();
+                borra(texto, caracter);
                 break;
         }
+    }
+
+    function borrarUlti(){
+        
     }
 }
