@@ -2,7 +2,7 @@ const texto = "Hola mundo";
 const comandos = ["INTERCAMBIA",  "BORRAULTI"];
 
 function procesatexto(texto, comandos) {
-    let texto = texto
+    let cadenaProcesada = texto
     function comprobarMemoria(texto) {
         if (texto.length > 1000) {
             return "MemoryLimitExceeded";
@@ -39,6 +39,14 @@ function procesatexto(texto, comandos) {
                 borra(texto, caracter);
                 break;
         }
+    }
+
+    function borraUlti(texto){
+        cadenaProcesada = texto.substring(0, texto.length - 1)
+    }
+
+    function borraPri(texto){
+        cadenaProcesada = texto.substring(1, texto.length)
     }
 
     for(let i = 0; i < comandos.length; i++){
