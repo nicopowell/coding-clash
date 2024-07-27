@@ -53,6 +53,33 @@ function procesatexto(texto, comandos) {
         cadenaProcesada = texto + texto
     }
 
+    function rota(texto) {
+        if(texto.lenght>0){
+        let caracter = texto.charAt(0);
+        texto = texto.substring(1, texto.lenght).concat(caracter)
+        }
+    }
+
+    function intercambia(texto){
+        const vec=texto.split('');
+        for(let i=0;i<vec.length;i++){
+          let ch=vec[i]
+          if(ch===ch.toUpperCase()){
+            vec[i]=ch.toLowerCase();
+          }else{
+            vec[i]=ch.toUpperCase()
+          }
+        }
+        return texto=vec.join('')
+      }
+
+    function chauAgus(texto){
+        let mayuscula = texto.toUpperCase
+        if(mayuscula.includes("AGUS")){
+            cadenaProcesada = texto.slice(mayuscula.indexOf("AGUS"), mayuscula.indexOf("AGUS") + 4)
+        }
+    }
+
     for(let i = 0; i < comandos.length; i++){
         comprobarMemoria(texto)
         elegirFuncion(comandos[i])
