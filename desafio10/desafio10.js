@@ -6,16 +6,18 @@ function chocolates(K, N){
         return 0
     }
 
-    let cantidadVariedades = 0
+    let cantidadVariedades
     let caja = 0
     let cantidadCajas = 0
 
-    for (const bombon of N) {
-        if(bombon > 0){
-            cantidadVariedades++
+    function variedades(N){
+        cantidadVariedades = 0
+        for (let i = 0; i < N.length; i++) {
+            if(N[i] > 0){
+                cantidadVariedades++
+            }
         }
-    }
-    console.log(cantidadVariedades)
+    }    
 
     while(cantidadVariedades >= K){
         for (let i = 0; i < N.length; i++) {
@@ -29,9 +31,6 @@ function chocolates(K, N){
                 break
             }
         }
+        variedades(N)
     }
-    
-
-
-    console.log(N)
 }
