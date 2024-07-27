@@ -1,14 +1,14 @@
 const K = 5
-const N = [2, 2, 2, 2, 0]
+const N = [1, 1, 1, 1, 1]
 
 function chocolates(K, N){
-    if(K > N.length){
-        return 0
-    }
-
     let cantidadVariedades
     let caja = 0
     let cantidadCajas = 0
+    if(K > N.length){
+        return cantidadCajas
+    }
+
 
     function variedades(N){
         cantidadVariedades = 0
@@ -17,7 +17,9 @@ function chocolates(K, N){
                 cantidadVariedades++
             }
         }
-    }    
+    }      
+
+    variedades(N)
 
     while(cantidadVariedades >= K){
         for (let i = 0; i < N.length; i++) {
@@ -33,4 +35,5 @@ function chocolates(K, N){
         }
         variedades(N)
     }
+    return cantidadCajas
 }
