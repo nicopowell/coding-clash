@@ -2,6 +2,7 @@ const texto = "Hola mundo";
 const comandos = ["INTERCAMBIA",  "BORRAULTI"];
 
 function procesatexto(texto, comandos) {
+    let texto = texto
     function comprobarMemoria(texto) {
         if (texto.length > 1000) {
             return "MemoryLimitExceeded";
