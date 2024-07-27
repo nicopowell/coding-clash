@@ -80,6 +80,15 @@ function procesatexto(texto, comandos) {
         }
     }
 
+    function borra(texto, indice){
+        let extremoIzquierdo = indice++;
+        let extremoDerecho = indice++;
+        console.log(indice)
+        
+        let aux = texto;
+        cadenaProcesada = aux.substring(0,extremoIzquierdo).concat(aux.substring(extremoDerecho,4))
+      }
+
     for (let i = 0; i < comandos.length; i++) {
         comprobarMemoria(texto);
         elegirFuncion(comandos[i]);
